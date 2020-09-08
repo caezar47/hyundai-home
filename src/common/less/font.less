@@ -1,0 +1,38 @@
+.include-custom-font(
+	@family: @roboto, 
+	@src-name: @roboto, 
+	@weight: normal, 
+	@style: normal
+	){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+
+.include-custom-font(
+	@family: @site_ff_b300,
+	@src-name: 'MuseoSansCyrl-300',
+);
+.include-custom-font(
+	@family: @site_ff_300,
+	@src-name: 'TTProstoSans-Light',
+);
+.include-custom-font(
+	@family: @site_ff_400,
+	@src-name: 'TTProstoSans-Regular',
+);
+.include-custom-font(
+	@family: @site_ff_700,
+	@src-name: 'TTProstoSans-Bold',
+);

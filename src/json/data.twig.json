@@ -1,0 +1,62 @@
+{
+	"contacts":{
+		"name":"hyundai-home",
+		"domain":"hyundai-home.ru",
+		"domain_link":"https://hyundai-home.ru/",
+		"color":"#F24F00",
+		"agreement_page":"agreement",
+		"copyright":"timberk",
+		"email":"what@2sharp.ru",
+		"email2":"pr@2sharp.ru",
+		"phone":"+7 495 514 12 34",  
+		"phone_tel":"+74955141234", 
+		"phone2":"+7 903 786 19 12",  
+		"phone2_tel":"+79037861912",   
+		"clock":"С 10 до 19:00, без выходных",  
+		"address":"115184, Россия, Москва,  ул. Большая Татарская, д. 35 стр. 7-9",
+		"map_center":"55.737464, 36.6367",
+		"map_center_coord":"[55.737464, 37.6367]",
+		"map_zoom":"18",
+		"map_zoom_xs":"12",
+		"map_point_coord":"[55.737464, 37.6367]",
+		"map_point_heading":"Большая Татарская улица, 35 строение 7-9"
+	},
+	"soc":{
+		"yb":"https://www.youtube.com/channel/UC1cnObAoKV_l9dI1qrGGOGw",
+		"inst":"https://www.instagram.com/2sharp_agency",
+		"fb":"https://www.facebook.com/2sharp.creative",
+		"bh":"https://www.behance.net/teams/2sharp",
+		"vi":"https://vimeo.com/twosharp"
+	},
+
+	"page":{
+		"index":"./",
+		"works":"./works.html",
+		"works_card":"./works-card.html",
+		"agency":"./agency.html",
+		"agency_en":"./agency-en.html",
+		"agency_en":"#",
+		"contacts":"./contacts.html"
+	},
+	"prefix":{
+		"content":"content-block__",
+		"heading":"page-header__",
+		"form":"form__",
+		"card":"card__",
+		"table":"table__",
+		"btn":"btn__",
+		"tabs":"tabs__",
+		"map":"map__",
+		"link":"link__",
+		"breadcrumb":"breadcrumb__",
+		"pagination":"pagination__",
+		"btn-icon":"btn-icon__"
+	},
+	"path":{		                  
+		"css":"./css",
+		"img":"./img",
+		"js":"./js",
+		"favicon":"./favicon",
+		"docs":"./docs" 
+	}
+}

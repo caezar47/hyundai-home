@@ -1,0 +1,243 @@
+//
+// Carousel
+// --------------------------------------------------
+
+/*
+.carousel {
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  > .item {
+	display: block;
+	position: relative;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	.transition(0.9s ease-in-out all);
+
+	// Account for jankitude on images
+	> img,
+	> a > img {
+	  &:extend(.img-responsive);
+	  line-height: 1;
+	}
+
+	// WebKit CSS3 transforms for supported devices
+	@media all and (transform-3d), (-webkit-transform-3d) {
+	  .transition-transform(~'0.9s ease-in-out');
+	}
+  }
+
+  > .active,
+  > .next,
+  > .prev {
+	display: block;
+  }
+
+}
+// Left/right controls for nav
+// ---------------------------
+
+
+// Optional indicator pips
+//
+// Add an unordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+
+
+
+*/
+
+//
+// Carousel
+// --------------------------------------------------
+
+
+// Wrapper for the slide container and indicators
+.carousel {
+  &, .carousel-inner, .item{
+	//width: 100%;	
+	position: relative;
+	//@media @media-point-notsmart{height: 100%;}
+  }
+}
+
+.carousel-inner {
+  overflow: hidden;
+  > .item {
+	display: none;
+	//position: absolute;
+	top: 0;
+	left: 0;
+	.transition(.5s ease-in-out left);
+	> img,
+	> a > img {
+	  &:extend(.img-responsive);
+	  line-height: 1;
+	}
+
+	// WebKit CSS3 transforms for supported devices
+	/*@media all and (transform-3d), (-webkit-transform-3d) {
+	  .transition-transform(~'0.5s ease-in-out');
+	  .backface-visibility(~'hidden');
+	  .perspective(1000px);
+
+	  &.next,
+	  &.active.right {
+		.translate3d(100%, 0, 0);
+		left: 0;
+	  }
+	  &.prev,
+	  &.active.left {
+		.translate3d(-100%, 0, 0);
+		left: 0;
+	  }
+	  &.next.left,
+	  &.prev.right,
+	  &.active {
+		.translate3d(0, 0, 0);
+		left: 0;
+	  }
+	}*/
+  }
+
+  > .active,
+  > .next,
+  > .prev {
+	display: block;
+  }
+
+  > .active {
+	left: 0;
+  }
+
+  > .next,
+  > .prev {
+	position: absolute;
+	top: 0;
+	width: 100%;
+  }
+
+  > .next {
+	left: 100%;
+  }
+  > .prev {
+	left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+	left: 0;
+  }
+
+  > .active.left {
+	left: -100%;
+  }
+  > .active.right {
+	left: 100%;
+  }
+
+}
+.carousel-control{
+	z-index: 2;
+}
+
+/*
+.carousel-slideFullOutTop {}
+.carousel-slideFullOutTop .carousel-inner .item {
+  transition-property: transform;
+ 
+}
+.carousel-slideFullOutTop .carousel-inner .active {
+  transform:scale(1);
+
+}
+.carousel-slideFullOutTop .carousel-inner .active.left,
+.carousel-slideFullOutTop .carousel-inner .active.right {
+  left: 0;
+  transform:scale(0);
+  z-index: 1;
+}
+.carousel-slideFullOutTop .carousel-inner .next.left{
+  animation-name: slideFullOutTop;
+  animation-duration: 0.6s; 
+  animation-timing-function: ease; 
+  visibility: visible !important;   
+}
+.carousel-slideFullOutTop .carousel-inner .prev.right {
+  animation-name: slideFullOutTop1;
+  animation-duration: 0.6s; 
+  animation-timing-function: ease; 
+  visibility: visible !important;   
+}
+@keyframes slideFullOutTop {
+  0% {
+	transform: translate3d(0%, 100%, 0);
+	visibility: visible;
+  }
+
+  100% {
+	transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideFullOutTop1 {
+  0% {
+	transform: translate3d(0%, -90%, 0);
+	visibility: visible;
+  }
+
+  100% {
+	transform: translate3d(0, 0, 0);
+  }
+}
+.carousel-slideFullOutTop .carousel-control {
+  z-index: 2;
+}
+*/
+//fade
+/*@media @media-point-screen{
+	.carousel-fade{
+
+	  .item{
+		opacity: 0;
+		transition-property: opacity;
+	  }
+	  .active {
+		opacity: 1;
+		z-index: 2;
+		&.left, &.right{opacity: 0;}
+	  }
+	  .next.left,.prev.right {
+		opacity: 1;
+	  }
+	  .carousel-control {
+		//z-index: 2;
+	  } 
+	}
+	@media all and (transform-3d), (-webkit-transform-3d) {
+		.carousel-fade .carousel-inner > .item.next,
+		.carousel-fade .carousel-inner > .item.active.right {
+		  opacity: 0;
+		  transform: translate3d(0, 0, 0);
+		}
+		.carousel-fade .carousel-inner > .item.prev,
+		.carousel-fade .carousel-inner > .item.active.left {
+		  opacity: 0;
+		  transform: translate3d(0, 0, 0);
+		}
+		.carousel-fade .carousel-inner > .item.next.left,
+		.carousel-fade .carousel-inner > .item.prev.right,
+		.carousel-fade .carousel-inner > .item.active {
+		  opacity: 1;
+		  transform: translate3d(0, 0, 0);
+		}
+	} 
+} */

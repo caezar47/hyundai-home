@@ -1,0 +1,256 @@
+//===== url =====//
+@url-site 					: 	'';
+@url-path 					: 	'..';
+@url-path-css 				: 	'@{url-path}/css';
+@url-path-fonts 			: 	'@{url-path}/fonts';
+@url-path-img 				: 	'@{url-path}/img';
+@url-path-js 				: 	'@{url-path}/js';
+
+//===== color =====//
+//= default
+@white 						:	#fff;
+@black 						: 	#000;
+@black-14 					: 	#181417;
+@green 						: 	#AFDE0E;
+@green-h 					: 	#A1E100;
+@green-a 					: 	#95D212;
+@black-d0 					: 	#D0D0D0;
+@red 						:	#DB5610;
+
+@primary 					:	@green;
+@primary-h 					:	@green-h;
+@default 					:	@black-14;
+@warning 					:	@red;
+@success 					:	@green-a;
+@info 						:	@black-d0;
+@danger 					:	@red;
+
+//===== fonts =====//
+@stem 						: 	stem-400;
+@stem-300 					: 	stem-300;
+@stem-500 					: 	stem-500;
+@stem-700 					: 	stem-700;
+
+@druk-wide: 					druk-wide-500;
+
+//===== base =====//
+@site_bg 					:	@white; 
+@site_color 				:	@default; 
+@site_link_color 			:	@primary; 
+@site_link_color_hover 		:	@success; 
+
+@site_ff_b300 				:	'Museo-300';
+
+@site_ff_300 				:	'Prosto-Light';
+@site_ff_400 				:	'Prosto-Regular';
+@site_ff_700 				:	'Prosto-Bold';
+
+@site_ff 					:	@site_ff_b300; 
+@site_ff_custom 			:	@druk-wide; 
+
+@site_fs 					:	18px; 
+@site_lh 					:	24px; 
+@site_fs_xs 				:	16px; 
+@site_lh_xs 				:	24px; 
+
+@block_pl 					: 	6.2vw;
+
+@b-ff 						:	@stem;
+@b-ff-2 					:	@druk-wide;
+
+@b-color-a 					:	@primary; 
+@b-color-a-hover 			:	@primary-h; 
+ 		
+@b-fs 						: 	@site_fs;
+@b-lh 						: 	@site_lh;
+@trs-site 					: 	all 0.35s ease; 
+@trs-option 				: 	0.35s ease; 
+@b_rad 						: 	5px; 
+//
+@margin_map:
+	huge 	4vw		30px,
+	normal 	3.4vw	30px,
+	large 	3.4vw	30px,
+	medium 	2.5vw	25px,
+	small 	1.8vw	20px,
+	tiny 	15px	15px,
+	narrow 	10px	10px,
+	default 30px	10px;
+@fw_map:
+	thin 	100,
+	elight 	200,
+	light 	300,
+	normal 	400,
+	medium  500,
+	sbold  	600,
+	bold  	700,
+	ebold 	800,
+	black  	900;
+//===== grid =====//
+@xs 						:	0px;
+@sm 						:	575px;
+@md 						:	768px;
+@lg 						:	992px;
+@xl 						:	1200px;
+@xxl 						:	1700px;
+
+@b-container  				:	1380px;
+@b-container-default  		:	1045px;
+@container_gap  			:	15px;
+@container_gap_xl  			:	6.7vw;
+
+
+//===== navbar =====//
+@navbar_header_bg 			:	@white;
+@navbar_collapse_bg 		: 	@primary;
+
+@navbar_logo_widht 			: 	160px;
+@navbar_logo_height 		: 	120px;
+@navbar_logo_device_widht 	: 	88px;
+@navbar_logo_device_height 	: 	32px;
+
+@navbar_humb_width 			:	32px;
+@navbar_humb_height 		: 	22px;
+@navbar_humb_color 			:	@black;
+@navbar_humb_color_hover 	:	@black;
+@navbar_humb_color_active 	:	@black;
+
+@navbar_xs_humb_bg			:	@primary;
+@navbar_xs_humb_color 		:	@white;
+@navbar_xs_humb_color_active :	@white;
+
+
+@navbar_nav_color 			:	@black;
+@navbar_nav_color_hover 	:	@primary;
+@navbar_nav_color_active 	:	@primary;
+
+@navbar_xs 					:	40px; 
+@navbar_xs_height			:	92px; 
+@navbar_screen 				:	80px;  
+//===== end's navbar =====//
+
+//===== footer =====//
+@footer_color 				:	@white; 
+@footer_color_hover 		:	@white; 
+@footer_bg 					:	@default;
+@footer_ff 					:	@b-ff; 
+@footer_fs 					:	@b-fs; 
+@footer_lh 					:	@b-lh; 
+
+//= logotip
+@footer_logo_color 			: 	@primary;
+@footer_logo_widht 			: 	120px;
+@footer_logo_height 		: 	50px;
+//===== end's footer =====//
+
+//===== btn =====//
+@btn_fs 					: 	1em;
+@btn_lh 					: 	1.25em;
+@btn_radius 				:	0;
+//== base ==
+@btn_color 					:	@white;
+@btn_border_color 			:	@primary;
+@btn_bg_color 				:	@primary;
+//= hover =
+@btn_hover_color 			:	@white;
+@btn_hover_bg_color 		:	@primary;	
+@btn_hover_border_color 	:	@primary;
+
+//== link ==
+@link_color 				:	@primary;
+@link_color_hover 			:	@success;
+//===== end's btn =====//
+
+//===== form  =====//
+
+//=== error ===
+@form_error_bg 				: 	#db4c4c;
+@form_error_bg_pass 		: 	#db4c4c;
+@form_error_bg_load 		: 	#db4c4c;
+@form_error_text_color 		: 	@white;
+@form_error_border_color 	: 	#db4c4c;
+@form_error_border_width 	: 	0px;
+@form_error_fs 				: 	@b-fs - 6;
+@form_error_lh 				: 	@b-lh - 6;
+@form_error_radius 			: 	0;
+
+
+//=== input ===
+@input_label				: 	@info;
+@input_bg					:	@white;
+@input_height				:	40px;
+@input_height_textarea		:	65px;
+@input_radius				:	0px;
+@input_border_color			:	@primary;
+@input_border_width			:	1px;
+
+//= focus =
+@input_focus_label			:	@info;
+@input_focus_bg				:	@white;
+@input_focus_border_color	:	@primary;
+
+//== input text ==
+@input_t_color				:	@default;
+@input_t_fs					:	@b-fs;
+@input_t_lh					:	@b-lh;
+//= focus =
+@input_focus_t_color		:	@default;
+
+//== placeholder ==
+@input_plh_color			:	@info;
+@input_plh_fs				:	@b-fs;
+@input_plh_lh				:	@b-fs;
+//= focus =
+@input_focus_plh_color		:	@site_color;
+
+//===== table =====//
+@table_color 				:	@default;
+@table_border_color 		:	@info;
+@table_bg_colspan 			:	@white;
+@table_padding 				:	30px 15px;
+
+@table_head_color 			:	@default;
+@table_head_bg 				:	@info;
+@table_head_padding 		:	20px 15px;
+@table_head_border_color 	:	@info;
+//===== end's table =====//
+
+//===== modals =====//
+@modal_backdrop 			:	#585858;
+@modal_backdrop_fade 		:	0.7;
+@modal_bg 					:	@white;
+@modal_border_rad 			:	5px;
+@modal_width 				:	770px;
+@modal_btn_width 			: 	32px;
+@modal_btn_border_rad 		:	0%;
+@modal_btn_color 			:	@white;
+@modal_btn_bg 				:	@modal_bg;
+@modal_btn_border 			:	2px;
+@modal_btn_border_color 	:	@primary;
+@modal_btn_color_hover 		:	#3b9e00;
+@modal_btn_bg_hover 		:	@success;
+@modal_btn_border_color_hover:	@success;
+//===== end's modals =====//
+
+
+//===== slider slick =====//
+@slider_btn_width 			: 	32px;
+@slider_btn_padding 		: 	0 8px;
+@slider_btn_color 			: 	@site_color;
+@slider_btn_bg 				: 	@white;
+@slider_btn_border 			: 	2px;
+@slider_btn_border_color 	: 	@primary;
+@slider_btn_radius 			: 	0%;
+
+@slider_btn_color_hover 	: 	@white;
+@slider_btn_bg_hover 		: 	@primary;
+@slider_btn_border_color_hover:	@primary;
+
+@slider_dots_bottom 		: 	1.5vw;
+@slider_dots_width 			: 	16px;
+@slider_dots_gutter 		: 	10px;
+@slider_dots_bg 			: 	@primary;
+@slider_dots_radius 		: 	50%;
+
+@slider_dots_bg_active 		: 	@white;
+//===== end's slider slick =====// 

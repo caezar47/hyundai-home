@@ -1,0 +1,1 @@
+$('img').addClass('img-responsive');

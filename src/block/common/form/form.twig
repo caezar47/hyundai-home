@@ -1,0 +1,54 @@
+{% if view=="order" %}
+	<form action="#" class="{{prefix}}panel  {{mod}}"  data-form-validation>
+		<div class="{{prefix}}row  grid__row  {{mod}}">				
+			{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, list: [
+				{
+					"type":"text",
+					"validate":"validate[required, custom[onlyLetterSp]]",
+					"placeholder":"Ваше имя",
+				},
+				{
+					"type":"text", 
+					"validate":"validate[required]",
+					"placeholder":"Наименование магазина",
+				},
+				{
+					"view":"date", 
+					"type":"text", 
+					"validate":"validate[required]",
+					"placeholder":"Дата покупки",
+				},
+				{
+					"type":"email",
+					"validate":"validate[required, custom[email]]",
+					"placeholder":"E-mail",
+				}
+			]} %}
+			<div data-grid-file>				
+				{% include "elem-tpl.twig" with {
+					view: "file", 
+					prefix:prefix, 
+					mod:mod,
+					color:color,
+					validate:"validate[required]",
+					name:"Прикрепить фото чека",
+				}%}
+			</div>
+			<div data-grid-agreement>				
+				{% include "elem-tpl.twig" with {
+					view: "agreement", 
+					prefix:prefix, 
+					mod:mod,
+					validate:"validate[required]",
+					name:'<span>Cогласен с <a target="_blank" href="/about/contacts/confidentional/">правилами сайта обработки персональных данных</a></span>',
+				}%}
+			</div>
+			<div data-grid-submit>	
+				<button type="submit" class="{{prefix}}submit">Отправить</button>	
+			</div>
+			<div data-grid-link>	
+				<a href="#" class="{{prefix}}link">Полные правила акции</a>	
+			</div>
+		</div>
+	</form>
+{% endif %}

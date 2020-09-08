@@ -1,0 +1,341 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+	.container-fixed();
+	width: 100%;
+	@media @media-point-screen{width: 95vw;}
+	@media @media-point-xxl{width: 85vw; max-width: @b-width;}
+}
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+	.container-fixed();	
+	padding-left: 40px;
+	padding-right: 40px; 
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+	.make-row();
+	&.is--wrap{flex-wrap: wrap;}
+	//justify-content	
+	&.is--jcfs{justify-content: flex-start;}
+	&.is--jcfe{justify-content: flex-end;}
+	&.is--jcsb{justify-content: space-between;}
+	&.is--jcsa{justify-content: space-around;}
+	&.is--jcc{justify-content: center;}
+	//align-items
+	&.is--aic{align-items: center;}
+	&.is--gutter{
+		margin-top: -30px;
+		> .cols{
+			padding-top: 30px;
+		}
+	}
+	&.is--gutter15{
+		margin-top: -15px;
+		> .cols{
+			padding-top: 15px;
+		}
+	}
+	&.is--gutter10{
+		margin-top: -10px;
+		> .cols{
+			padding-top: 10px;
+		}
+	}
+	&.is--gap-lg{
+		@media @media-point-xxl {		
+			margin-left: -1.5vw;
+			margin-right: -1.5vw;
+			> .cols{		
+				padding-left: 1.5vw;
+				padding-right: 1.5vw;
+			}	
+		}
+	}
+}
+.cols {
+	.make-cols();	
+	&.is--cols-1{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(1, 12);}
+	}	
+	&.is--cols-2{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(2, 12);}
+	}
+	&.is--cols-3{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(3, 12);}
+	}
+	&.is--cols-4{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(4, 12);}
+	}
+	&.is--cols-5{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(5, 12);}
+	}
+	&.is--cols-6{
+		.makeCols(12, 12);
+		@media @media-point-notsmart {.makeCols(6, 12);}
+	}
+	&.is--cols-7{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(7, 12);}
+	}
+	&.is--cols-8{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(8, 12);}
+	}
+	&.is--cols-9{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(9, 12);}
+	}
+	&.is--cols-10{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(10, 12);}
+	}
+	&.is--cols-11{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(11, 12);}
+	}
+	&.is--cols-12{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(12, 12);}
+	}
+	&.is--cols-screen-1{		
+		@media @media-point-screen {.makeCols(1, 12);}
+	}	
+	&.is--cols-screen-2{		
+		@media @media-point-screen {.makeCols(2, 12);}
+	}
+	&.is--cols-screen-3{		
+		@media @media-point-screen {.makeCols(3, 12);}
+	}
+	&.is--cols-screen-4{		
+		@media @media-point-screen {.makeCols(4, 12);}
+	}
+	&.is--cols-screen-5{		
+		@media @media-point-screen {.makeCols(5, 12);}
+	}
+	&.is--cols-screen-6{		
+		@media @media-point-screen {.makeCols(6, 12);}
+	}
+	&.is--cols-screen-7{		
+		@media @media-point-screen {.makeCols(7, 12);}
+	}
+	&.is--cols-screen-8{		
+		@media @media-point-screen {.makeCols(8, 12);}
+	}
+	&.is--cols-screen-9{		
+		@media @media-point-screen {.makeCols(9, 12);}
+	}
+	&.is--cols-screen-10{		
+		@media @media-point-screen{.makeCols(10, 12);}
+	}
+	&.is--cols-screen-11{		
+		@media @media-point-screen{.makeCols(11, 12);}
+	}
+	&.is--cols-screen-12{	
+		@media @media-point-screen {.makeCols(12, 12);}
+	}
+	//sm
+	&.is--cols-sm-1{		
+		@media @media-point-sm{.makeCols(1, 12);}
+	}	
+	&.is--cols-sm-2{		
+		@media @media-point-sm{.makeCols(2, 12);}
+	}
+	&.is--cols-sm-3{		
+		@media @media-point-sm{.makeCols(3, 12);}
+	}
+	&.is--cols-sm-4{		
+		@media @media-point-sm{.makeCols(4, 12);}
+	}
+	&.is--cols-sm-5{		
+		@media @media-point-sm{.makeCols(5, 12);}
+	}
+	&.is--cols-sm-6{		
+		@media @media-point-sm{.makeCols(6, 12);}
+	}
+	&.is--cols-sm-7{		
+		@media @media-point-sm{.makeCols(7, 12);}
+	}
+	&.is--cols-sm-8{		
+		@media @media-point-sm{.makeCols(8, 12);}
+	}
+	&.is--cols-sm-9{		
+		@media @media-point-sm{.makeCols(9, 12);}
+	}
+	&.is--cols-sm-10{		
+		@media @media-point-sm{.makeCols(10, 12);}
+	}
+	&.is--cols-sm-11{		
+		@media @media-point-sm{.makeCols(11, 12);}
+	}
+	&.is--cols-sm-12{	
+		@media @media-point-sm{.makeCols(12, 12);}
+	}
+	//md1
+	&.is--cols-md-1{		
+		@media @media-point-md1 {.makeCols(1, 12);}
+	}	
+	&.is--cols-md-2{		
+		@media @media-point-md1 {.makeCols(2, 12);}
+	}
+	&.is--cols-md-3{		
+		@media @media-point-md1 {.makeCols(3, 12);}
+	}
+	&.is--cols-md-4{		
+		@media @media-point-md1 {.makeCols(4, 12);}
+	}
+	&.is--cols-md-5{		
+		@media @media-point-md1 {.makeCols(5, 12);}
+	}
+	&.is--cols-md-6{		
+		@media @media-point-md1 {.makeCols(6, 12);}
+	}
+	&.is--cols-md-7{		
+		@media @media-point-md1 {.makeCols(7, 12);}
+	}
+	&.is--cols-md-8{		
+		@media @media-point-md1 {.makeCols(8, 12);}
+	}
+	&.is--cols-md-9{		
+		@media @media-point-md1 {.makeCols(9, 12);}
+	}
+	&.is--cols-md-10{		
+		@media @media-point-md1{.makeCols(10, 12);}
+	}
+	&.is--cols-md-11{		
+		@media @media-point-md1{.makeCols(11, 12);}
+	}
+	&.is--cols-md-12{	
+		@media @media-point-md1 {.makeCols(12, 12);}
+	}
+	//xxs
+	&.is--cols-xxs-1{		
+		@media @media-point-xxs {.makeCols(1, 12);}
+	}	
+	&.is--cols-xxs-2{		
+		@media @media-point-xxs {.makeCols(2, 12);}
+	}
+	&.is--cols-xxs-3{		
+		@media @media-point-xxs {.makeCols(3, 12);}
+	}
+	&.is--cols-xxs-4{		
+		@media @media-point-xxs {.makeCols(4, 12);}
+	}
+	&.is--cols-xxs-5{		
+		@media @media-point-xxs {.makeCols(5, 12);}
+	}
+	&.is--cols-xxs-6{		
+		@media @media-point-xxs {.makeCols(6, 12);}
+	}
+	&.is--cols-xxs-7{		
+		@media @media-point-xxs {.makeCols(7, 12);}
+	}
+	&.is--cols-xxs-8{		
+		@media @media-point-xxs {.makeCols(8, 12);}
+	}
+	&.is--cols-xxs-9{		
+		@media @media-point-xxs {.makeCols(9, 12);}
+	}
+	&.is--cols-xxs-10{		
+		@media @media-point-xxs{.makeCols(10, 12);}
+	}
+	&.is--cols-xxs-11{		
+		@media @media-point-xxs{.makeCols(11, 12);}
+	}
+	&.is--cols-xxs-12{	
+		@media @media-point-xxs {.makeCols(12, 12);}
+	}
+	//xs
+	&.is--cols-xs-1{		
+		@media @media-point-xs {.makeCols(1, 12);}
+	}	
+	&.is--cols-xs-2{		
+		@media @media-point-xs {.makeCols(2, 12);}
+	}
+	&.is--cols-xs-3{		
+		@media @media-point-xs {.makeCols(3, 12);}
+	}
+	&.is--cols-xs-4{		
+		@media @media-point-xs {.makeCols(4, 12);}
+	}
+	&.is--cols-xs-5{		
+		@media @media-point-xs {.makeCols(5, 12);}
+	}
+	&.is--cols-xs-6{		
+		@media @media-point-xs {.makeCols(6, 12);}
+	}
+	&.is--cols-xs-7{		
+		@media @media-point-xs {.makeCols(7, 12);}
+	}
+	&.is--cols-xs-8{		
+		@media @media-point-xs {.makeCols(8, 12);}
+	}
+	&.is--cols-xs-9{		
+		@media @media-point-xs {.makeCols(9, 12);}
+	}
+	&.is--cols-xs-10{		
+		@media @media-point-xs{.makeCols(10, 12);}
+	}
+	&.is--cols-xs-11{		
+		@media @media-point-xs{.makeCols(11, 12);}
+	}
+	&.is--cols-xs-12{	
+		@media @media-point-xs {.makeCols(12, 12);}
+	}
+	//offset
+
+	&.is--offset-1{
+		@media @media-point-screen{.makeColsOffset(1, 12)}
+	}	
+	&.is--offset-2{
+		@media @media-point-screen{.makeColsOffset(2, 12)}
+	}
+	&.is--offset-3{
+		@media @media-point-screen{.makeColsOffset(3, 12)}
+	}
+	&.is--offset-4{
+		@media @media-point-screen{.makeColsOffset(4, 12)}
+	}
+	&.is--offset-5{
+		@media @media-point-screen{.makeColsOffset(5, 12)}
+	}
+	&.is--offset-6{
+		@media @media-point-screen{.makeColsOffset(6, 12)}
+	}
+	&.is--offset-7{
+		@media @media-point-screen{.makeColsOffset(7, 12)}
+	}
+	&.is--offset-8{
+		@media @media-point-screen{.makeColsOffset(8, 12)}
+	}
+	&.is--offset-9{
+		@media @media-point-screen{.makeColsOffset(9, 12)}
+	}
+	&.is--offset-10{
+		@media @media-point-screen{.makeColsOffset(10, 12)}
+	}
+	&.is--offset-11{
+		@media @media-point-screen{.makeColsOffset(11, 12)}
+	}
+}

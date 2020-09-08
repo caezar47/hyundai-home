@@ -1,0 +1,24 @@
+{% if view == "input" %}
+	{% for value in list %}	
+	<label class="{{prefix}}item  {{mod}}">
+		<input type="{{value.type}}" class="{{prefix}}control  {{mod}}  {{value.validate}}" {{value.required}} placeholder="{{value.placeholder}}" {% if value.view == "date" %}onfocus="(this.type='date')"{% endif %}>
+	</label>
+	{% endfor %}
+{% endif %}
+
+{% if view == "file" %}
+	<label class="{{prefix}}file  {{mod}}  {{color}}">
+		<input type="file" class="{{prefix}}file-input  {{mod}}  {{validate}}">
+		<div class="{{prefix}}file-name  {{mod}}  {{color}}">{{name}}</div>
+	</label>
+{% endif %}
+
+{% if view == "agreement" %}
+	<div class="{{prefix}}item  {{mod}}">
+		<label class="{{prefix}}checkbox  {{mod}}">
+			<input class="{{prefix}}checkbox-input  {{mod}}  {{validate}}" type="checkbox" checked id="agreement" name="agreement">
+			<span class="{{prefix}}checkbox-icon  {{mod}}"></span>
+			{{name}}
+		</label>
+	</div>
+{% endif %}

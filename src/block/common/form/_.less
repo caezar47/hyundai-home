@@ -1,0 +1,64 @@
+.form__{
+	&panel{
+   		&.is--modal-sale{
+   			margin: 0 auto;
+			max-width: 205px;			
+   		}
+	}
+	&item{
+		margin-bottom: 18px;
+	}
+	&control{
+		width: 100%;
+		border: 1px solid #0033a1;
+		background-color: @white;
+		color: #595959;
+		height: 30px;
+		text-align: center;
+    	box-shadow: none;
+    	padding: 5px 10px 7px;
+    	font-size: 14px;
+    	line-height: 14px;
+    	border-radius: 0;
+    	transition: @trs-site;
+    	box-sizing: border-box;
+		&::-moz-placeholder{
+			font-size: 11px;
+			line-height: 11px;		
+			font-weight: 300;		
+			color: #a7a7a7;
+			text-transform: uppercase;
+		}
+		&::-webkit-input-placeholder {
+			font-size: 11px;
+			line-height: 11px;	
+			font-weight: 300;					
+			color: #a7a7a7;
+			text-transform: uppercase;
+		}
+		&:focus{
+			border-color: #00c4d9;
+			outline: none;
+		}
+	}
+	&submit{
+		.btn-clearfix();
+		font-size: 19px;
+		line-height: 21px;
+		color: @white;		
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: bold;
+		background-color: #0033a1;
+		text-align: center;
+		padding: 8px 14px;
+		&:hover{
+			background-color: #00afab;
+		}
+		transition: @trs-site;
+		text-transform: uppercase;
+		&:hover{
+			background-color: #00c4d9;
+		}
+	}
+}

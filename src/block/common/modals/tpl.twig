@@ -1,0 +1,23 @@
+{% if ID == "modal-sale" %}
+<div class="{{prefix}}block modals  fade  {{mod}}" id="{{ID}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="{{prefix}}dialog  {{mod}}">
+		<div class="{{prefix}}body  {{mod}}"  style="background-image: url({{path.img}}/default/modal-bg-sale.png)">
+			<button type="button" class="{{prefix}}btn-close  modal-close  {{mod}}" data-dismiss="modal" aria-hidden="true"></button>
+			<div class="{{prefix}}content  {{mod}}"> 
+				<div class="{{prefix}}heading  {{mod}}">
+					Подпишись и получи спецпредложение
+				</div>
+				<div class="{{prefix}}preview  {{mod}}">
+					<img src="{{path.img}}/default/modal-sale-50.png" alt="" class="img-responsive">
+				</div>
+				<form action="" class="form__panel  {{mod}}">
+					<div class="form__item  {{mod}}">
+						<input type="text" class="form__control  {{mod}}" placeholder="ваш e-mail">
+					</div>
+					<button class="form__submit  {{mod}}">получить скидку</button>
+				</form>
+			</div> 
+		</div>
+	</div>
+</div>
+{% endif %}
