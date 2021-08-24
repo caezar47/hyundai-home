@@ -1,3 +1,16 @@
+{% if view == "nav" %}
+	<section class="{{content_prefix}}section  {{content_mod}}">
+		<div class="{{content_prefix}}container  container  {{content_mod}}">
+			<ul class="{{content_prefix}}nav  {{content_mod}}">
+				{% for n in nav %}
+					<li>
+						<a href="{{n.link}}" class="{{n.mod}}" {% if n.diff %}data-scrollto-diff="{{n.diff}}"{% endif %}>{{n.name}}</a>
+					</li>					
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+{% endif %}
 {% if view == "header" %}
 	<section class="{{content_prefix}}section  {{content_mod}}" {% if ID %}id="{{ID}}"{% endif %}>
 		<picture class="{{content_prefix}}img  {{content_mod}}">
