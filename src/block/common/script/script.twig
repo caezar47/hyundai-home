@@ -4,12 +4,9 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script src="{{path.js}}/jquery-3.2.1.min.js" ></script>
-
-{% if view == "modal" %}
-<script src="{{path.js}}/modals.js" ></script>
-{% else %}
-<script src="{{path.js}}/document-ready.js" ></script>
-{% endif %}
+{% for script in script %}
+<script src="{{path.js}}/{{script.name}}.js" ></script>
+{% endfor %}
 {# 
 <script src="{{path.js}}/svg4everybody.min.js" ></script>
 <script>

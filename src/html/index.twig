@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
     <head>
-        {% include "../block/common/head/head.twig" with {title:"Главная"}  %}
+        {% include "../block/common/head/head.twig" with {
+            title:"Главная",
+            style: [
+                {name: 'styles'},
+                {name: 'modal'}
+            ],
+        }  %}
     </head>
     <body>
         <a href="#" class="form__link" data-toggle="modal" data-target="#modal-sale">Скидки -50% hyundai</a>
          
         {% include "../block/common/modals/include.twig" %}        
         {% include "../block/common/script/script.twig" with {
-            view: "modal"
+            script: [
+                {name: 'modals'},
+            ],
         }%}
     </body>
 </html> 
