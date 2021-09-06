@@ -196,7 +196,13 @@
 					{% endif %}
 					{% if value.view == "agreement" %}
 						<div class="{{content_prefix}}card  {{content_mod}} {{value.mod}}">
-							<p class="{{content_prefix}}agreement  {{content_mod}}">{{value.placeholder}}</p>
+							<label class="{{content_prefix}}agreement  {{content_mod}}">
+								<input class="{{content_prefix}}agreement-input  {{content_mod}}  {{value.validate}}" type="checkbox" checked id="agreement" name="agreement">
+								<span class="{{content_prefix}}agreement-icon  {{content_mod}}"></span>
+								<span>
+								{{value.placeholder}}
+								</span>
+							</label>
 						</div>
 					{% endif %}
 				{% endfor %}
